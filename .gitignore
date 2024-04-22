@@ -1,3 +1,5 @@
 .idea/*
 venv/*
 scripts/__pycache__/*
+images/*
+!images/blank.png
