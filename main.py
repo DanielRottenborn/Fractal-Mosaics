@@ -7,18 +7,18 @@ import time
 
 ctypes.windll.user32.SetProcessDPIAware()
 
-txt_path = os.path.abspath("") + "\\" + "images.txt"  # modify this as you wish, I believe can be put in images folder
-path = os.path.abspath("images")
+txt_path = os.path.abspath("") + "\\" + "images.txt"
+path = os.path.abspath("images")  # path to the directory with images
 compiled_path = path + '\\' + 'compiled'
 pickle_path = path + '\\' + 'pickled'
 
-SECOND_ROUND = False
+SECOND_ROUND = False  # compile images with two layers of depth
 path_second = path + '\\' + 'compiled2'
 
 USE_PICKLE = True
-LOAD_IMAGES = True  # <--- You should probably set this to False the first time
+LOAD_IMAGES = False  # <--- You should set this to False for images to compile
 MAKE_IF_DOESNT_EXIST = True
-NUMBER_OF_PARTS = 128
+NUMBER_OF_PARTS = 128  # how many image parts should the program use to build an image (both rows and columns)
 RES_X_WINDOW = 1920
 RES_Y_WINDOW = 1080
 RES_X_IMAGE = 1920
